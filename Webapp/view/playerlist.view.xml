@@ -1,0 +1,22 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="IPL.controller.playerlist">
+<Page title="player">
+<content>
+<SearchField id="idsrh" search="onSearch"></SearchField>
+<List id="idLST" items="{path:'/player'}" >
+<items>
+
+<ObjectListItem title="{name}" intro="{type}" number="{path:'price', formatter: '.playerPrice'}"  icon="{img}" press="showDetails" type="Active">
+<attributes>
+<ObjectAttribute text="{avg}" title="Avg"/>
+<ObjectAttribute text="{matchesPlayed}" title="Matches Played"/>
+<ObjectAttribute text="{country}" title="Country"/>
+</attributes>
+<firstStatus>
+<ObjectStatus text="Avilable" state="Success"/>
+</firstStatus>
+</ObjectListItem>
+</items>
+</List>
+</content>
+</Page>
+</mvc:View>

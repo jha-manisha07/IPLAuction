@@ -1,0 +1,21 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout"
+		xmlns:form="sap.ui.layout.form" controllerName="IPL.controller.boughtPlayer"
+xmlns="sap.m" >
+   <Page title="My Team" showNavButton="true" navButtonPress="onBack" >
+
+<layout:HorizontalLayout id="HL" allowWrapping="true" content="{/player}">
+<!-- <Text text="{name}"></Text> -->
+<!-- <Text text="hello world"></Text> -->
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" backgroundImage="{img}">
+
+		<TileContent footer="{name}">
+
+    <!-- <Text text="{name}"></Text> -->
+     <!-- <ImageContent src="{img}" />  -->
+			
+		</TileContent>
+	</GenericTile>
+
+</layout:HorizontalLayout>
+    </Page>
+</mvc:View>

@@ -1,0 +1,8 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core2="sap.ui.core" xmlns:table="sap.ui.table" controllerName="IPL.controller.IPL_Auction">
+<Page title="Your Team" showNavButton="true" navButtonPress="onBack">
+<headerContent> </headerContent>
+<content>
+<!-- <Button id="idBack" ></Button> -->
+ </content>
+</Page>
+</mvc:View>

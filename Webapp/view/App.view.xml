@@ -1,0 +1,4 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="IPL.controller.App">
+<!-- splitapp- it split our app in two part master and detail  -->
+<SplitApp id="appCon"></SplitApp>
+</mvc:View>

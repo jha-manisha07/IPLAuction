@@ -1,0 +1,76 @@
+<mvc:View xmlns:tnt="sap.tnt" xmlns:mvc="sap.ui.core.mvc"
+ xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core2="sap.ui.core"
+  xmlns:table="sap.ui.table" controllerName="IPL.controller.Details">
+<Page title="Player's Detail" id="myPage">
+	
+<content >
+<IconTabBar
+		id="idIcon"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding" >
+		<items>
+			<IconTabFilter icon="sap-icon://hint" key="info">
+				<Text text="SAPUI5 is part of the user interface technologies in SAP HANA, NetWeaver ABAP, and Java systems " />
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://attachment"
+				key="attachments"
+				count="0">
+				<Text text="Attachments" />
+                <UploadCollection id="fileupload" class="createAttachment" items="{/Attachments}" maximumFilenameLength="37" maximumFileSize="5MB"
+								fileSizeExceed="onFilesizeExceed" filenameLengthExceed="onFilenameLengthExceed" multiple="false" noDataText="" showSeparators="All"
+								change="onAttachmentChange" uploadComplete="onUploadComplete" fileDeleted="onFileDeleted">
+                                <UploadCollectionItem url="{url}" documentId="{fileId}" fileName="{name}" mimeType="{Mimetype}" thumbnailUrl="" visibleEdit="false"
+									visibleDelete="true"/>
+							</UploadCollection>
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://notes"
+				key="notes"
+				count="0">
+				<Text text="Notes" />
+			</IconTabFilter>
+			<IconTabFilter icon="sap-icon://group" key="people" >
+				<Text text="People" />
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+ </content>
+<f:SimpleForm editable="true" id="myForm" >
+<core2:Title text="Player's Detail" icon="sap-icon://customer">
+ 
+</core2:Title>
+ 
+<f:content >
+<Label text="Player Name" ></Label>
+<Text  text="{name}"></Text>
+ 
+<Label text="Type"></Label>
+<Text  text="{type}"></Text>
+
+<Label text="Price"></Label>
+<Text text="{price}"></Text>
+
+
+<Label text="Average"></Label>
+<Text text="{avg}"></Text>
+
+<Label text="Country"></Label>
+<Text text="{country}"></Text>
+
+</f:content>
+</f:SimpleForm>
+ 
+ <footer>
+ <Toolbar id="toolBar">
+ <ToolbarSpacer ></ToolbarSpacer>
+ <Button id="idBtn" text="{= ${bought} === 1 ? 'Player Added' : 'player not added'}"
+ type="Emphasized" press="addBtn"></Button>
+ <Button id="idBtn2" text="My Team" type="Emphasized" press="seeBtn" ></Button>
+ <Button id="idBtn1" text="cancel" type="Reject" press="cancelBtn"></Button>
+ 
+ </Toolbar>
+ </footer>
+</Page>
+
+</mvc:View>
